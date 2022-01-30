@@ -1,3 +1,7 @@
+## becode challenge 
+- https://hub.docker.com/repository/docker/buzzworkers/petclinic
+- docker run -d --name petclinic buzzworkers/petclinic:release
+
 # Spring PetClinic Sample Application [![Build Status](https://travis-ci.org/spring-projects/spring-petclinic.png?branch=main)](https://travis-ci.org/spring-projects/spring-petclinic/)
 
 ## Understanding the Spring Petclinic application with a few diagrams

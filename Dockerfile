@@ -14,7 +14,7 @@ RUN mvn spring-javaformat:apply
 
 RUN mvn package
 
-FROM openjdk:8u171-jre-alpine
+FROM adoptopenjdk/openjdk11:ubi
 EXPOSE 8080
 COPY --from=maven /app/target/*.jar ./spring-petclinic.jar
 

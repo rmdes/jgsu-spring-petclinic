@@ -83,11 +83,11 @@
       <scope>runtime</scope>
     </dependency>
 
-    <jpa.database>MYSQL</jpa.database>
-    <jdbc.driverClassName>com.mysql.cj.jdbc.Driver</jdbc.driverClassName>
-    <jdbc.url>jdbc:mysql://localhost:3306/petclinic?useUnicode=true</jdbc.url>
-    <jdbc.username>petclinic</jdbc.username>
-    <jdbc.password>petclinic</jdbc.password>
+/*    <jpa.database>MYSQL</jpa.database>
+/*    <jdbc.driverClassName>com.mysql.cj.jdbc.Driver</jdbc.driverClassName>
+/*    <jdbc.url>jdbc:mysql://localhost:3306/petclinic?useUnicode=true</jdbc.url>
+/*    <jdbc.username>petclinic</jdbc.username>
+/*    <jdbc.password>petclinic</jdbc.password>
 
     <!-- caching -->
     <dependency>

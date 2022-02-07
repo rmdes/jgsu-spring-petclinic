@@ -5,7 +5,7 @@ node {
   stage('SonarQube Analysis') {
     def mvn = tool 'Default Maven';
     withSonarQubeEnv() {
-      sh "${mvn}/bin/mvn clean verify sonar:sonar -Dsonar.projectKey=rmdes_jgsu-spring-petclinic_AX7V_pSfED3aUq9OQqmr"
+      sh 'mvn clean verify -T 4 sonar:sonar -Dsonar.projectKey=rmdes_jgsu-spring-petclinic_AX7V_pSfED3aUq9OQqmr'
     }
   }
 }

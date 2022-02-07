@@ -9,7 +9,7 @@ sonarqube-check:
     paths:
       - .sonar/cache
   script: 
-    - mvn verify sonar:sonar -Dsonar.projectKey=rmdes_jgsu-spring-petclinic_AX66teb6Tzn_iZvFKBpM
+    - mvn -T4 -rf verify sonar:sonar -Dsonar.projectKey=rmdes_jgsu-spring-petclinic_AX66teb6Tzn_iZvFKBpM
   allow_failure: true
   only:
     - main # or the name of your main branch

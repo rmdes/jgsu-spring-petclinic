@@ -1,4 +1,5 @@
 sonarqube-check:
+  stage: sonar
   image: maven:3.6.3-jdk-11
   variables:
     SONAR_USER_HOME: "${CI_PROJECT_DIR}/.sonar"  # Defines the location of the analysis task cache
@@ -11,4 +12,37 @@ sonarqube-check:
     - mvn verify sonar:sonar -Dsonar.projectKey=rmdes_jgsu-spring-petclinic_AX66teb6Tzn_iZvFKBpM
   allow_failure: true
   only:
-    - master # or the name of your main branch
+    - main # or the name of your main branch
+stages:
+  - build
+  - test
+  - sonar
+
+cache:
+  paths:
+    - .m2/repository
+  key: "$CI_JOB_NAME"
+
+#build_job:
+#  stage: build
+#  script:
+#    - ./mvnw compile -T4C
+#      -Dhttps.protocols=TLSv1.2
+#      -Dmaven.repo.local=$CI_PROJECT_DIR/.m2/repository
+#      -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=WARN
+#      -Dorg.slf4j.simpleLogger.showDateTime=true
+#      -Djava.awt.headless=true
+#      --batch-mode --errors --fail-at-end --show-version -DinstallAtEnd=true -DdeployAtEnd=true
+#  image: openjdk:8-alpine
+
+#test_job:
+#  stage: test
+#  script:
+#    - ./mvnw test -T4C
+#      -Dhttps.protocols=TLSv1.2
+#      -Dmaven.repo.local=$CI_PROJECT_DIR/.m2/repository
+#      -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=WARN
+#      -Dorg.slf4j.simpleLogger.showDateTime=true
+#      -Djava.awt.headless=true
+#      --batch-mode --errors --fail-at-end --show-version -DinstallAtEnd=true -DdeployAtEnd=true
+#  image: openjdk:8-alpine

@@ -1,4 +1,17 @@
 ## becode challenge 
+
+## sonarcube
+- jenkins to sonarcube
+http://mendes-clone.becode.org/
+- gitlab to sonarcube 
+https://gitlabrunner.becode.org
+
+## webhook
+git push trigger a jenkins pipeline or gitlab-ci process
+
+
+# Jenkins to Docker
+
 - https://hub.docker.com/repository/docker/buzzworkers/petclinic
 - docker run -d --name petclinic buzzworkers/petclinic:release
 
